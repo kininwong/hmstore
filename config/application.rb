@@ -6,6 +6,9 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+# changing an existing application to API
+# add config.api_only = true
+
 module Hmstore
   class Application < Rails::Application
 
