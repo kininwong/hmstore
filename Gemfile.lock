@@ -121,9 +121,9 @@ GEM
       popper_js (>= 1.14.3, < 2)
       sassc-rails (>= 2.0.0)
     builder (3.2.4)
-    byebug (11.0.1)
+    byebug (11.1.0)
     camertron-eprun (1.1.1)
-    cancancan (3.0.1)
+    cancancan (3.0.2)
     canonical-rails (0.2.6)
       rails (>= 4.1, < 6.1)
     capybara (3.30.0)
@@ -164,6 +164,10 @@ GEM
       devise (>= 2.1.0)
     doorkeeper (5.2.3)
       railties (>= 5)
+    dotenv (2.7.5)
+    dotenv-rails (2.7.5)
+      dotenv (= 2.7.5)
+      railties (>= 3.2, < 6.1)
     erubi (1.9.0)
     execjs (2.7.0)
     fast_jsonapi (1.5)
@@ -237,6 +241,7 @@ GEM
       xml-simple
     paypal-sdk-merchant (1.117.2)
       paypal-sdk-core (~> 0.3.0)
+    pg (1.2.2-x64-mingw32)
     polyamorous (2.3.2)
       activerecord (>= 5.2.1)
     polyglot (0.3.5)
@@ -412,7 +417,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.4.2)
     state_machines (0.5.0)
     state_machines-activemodel (0.7.1)
       activemodel (>= 4.1)
@@ -467,7 +471,9 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   coffee-rails
+  dotenv-rails
   jbuilder (~> 2.7)
+  pg
   puma (~> 3.11)
   rails (~> 6.0.0)
   sass-rails (~> 5)
@@ -480,7 +486,6 @@ DEPENDENCIES
   spree_i18n!
   spree_paypal_express!
   spree_wishlist!
-  sqlite3 (~> 1.4)
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 3.3.0)

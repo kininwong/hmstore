@@ -6,8 +6,8 @@ ruby '2.6.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0'
 # Use sqlite3 as the database for Active Record
- gem 'sqlite3', '~> 1.4'
-#gem 'pg'
+# gem 'sqlite3', '~> 1.4'
+gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5'
 # Use Puma as the app server
@@ -15,6 +15,16 @@ gem 'puma', '~> 3.11'
 gem 'awesome_print'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails'
+
+group :development, :test do
+  gem 'dotenv-rails'
+  # foreman doesn't allow us to update dotenv-rails which is required for Rails 6
+  # for now please use gem install foreman
+  # gem 'foreman', '~> 0.85'
+
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+end
 
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 4.0'
@@ -52,11 +62,6 @@ gem 'spree_paypal_express', github: 'spree-contrib/better_spree_paypal_express'
 gem 'spree_i18n', github: 'spree-contrib/spree_i18n'
 # globalization project extracted from spree_i18n for spree commerce version 3.1+
 #gem 'spree_globalize', github: 'spree-contrib/spree_globalize'
-
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
