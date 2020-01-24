@@ -25,13 +25,9 @@ development:
   database: spree-development
   host: localhost
   username: postgres
-  password: 
-  #password: <%= ENV['DEV_DB_PASSWORD'] %>
-  #password: <%= ENV.fetch("DEV_DB_PASSWORD") %>
-  #password: <%= Rails.application.secrets[:postgres] %>
-  port: <%= ENV.fetch('DB_PORT',5432) %>
-  #port: <%= ENV.fetch('DB_PORT',45432) %>
-
+  password: <%= ENV.fetch('DEV_DB_PASSWORD') %>
+  port: <%= ENV.fetch('DEV_DB_PORT') %>
+  
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
@@ -67,8 +63,8 @@ test:
   database: spree-test
   host: localhost
   username: postgres
-  password: 
-  port: <%= ENV.fetch('DB_PORT',5432) %>
+  password: <%= ENV.fetch('DEV_DB_PASSWORD') %>
+  port: <%= ENV.fetch('DEV_DB_PORT') %>
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
