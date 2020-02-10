@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.5'
+ruby '2.7.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0'
@@ -49,10 +49,11 @@ gem 'spree', spree_version
 gem 'spree_gateway', '~> 3.6'
 gem 'spree_auth_devise', '~> 4.0'
 gem 'spree_analytics_trackers'
+gem 'spree_multi_vendor', github: 'spree-contrib/spree_multi_vendor', branch: 'master'
 
 # User
-#gem 'spree_wishlist', github: 'spree-contrib/spree_wishlist', branch: 'master'
-gem 'spree_wishlist', github: 'MateoLa/spree_wishlist', branch: 'master'
+gem 'spree_wishlist', github: 'spree-contrib/spree_wishlist', branch: 'rails_6_spree_4'
+#gem 'spree_wishlist', github: 'MateoLa/spree_wishlist', branch: 'master'
 gem 'spree_email_to_friend', github: 'kininwong/spree_email_to_friend', branch: 'master'
 
 # Payment
